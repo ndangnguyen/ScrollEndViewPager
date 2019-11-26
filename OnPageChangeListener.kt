@@ -10,7 +10,7 @@ val sharedViewModel = sharedViewModel ?: return
             }
 
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
-                if (isPageEnd && selectedPageIndex == position && !sharedViewModel.isSlideLeftToRight) {
+                if (isPageEnd && !sharedViewModel.isSlideLeftToRight) {
                     sharedViewModel.onScrollToTakeOutMenu.value = true
                     isPageEnd = false
                 }
